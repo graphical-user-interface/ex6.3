@@ -29,11 +29,15 @@ const useStyles = makeStyles((theme) => ({
 
 const data = {
 	en: {
+		EN: "English",
+		FI: "Finnish",
 		REVERSER: "Reverser",
 		REVERSED: "Reversed:",
 		INPUT: "Input:",
 	},
 	fi: {
+		EN: "Englangtia",
+		FI: "Suomi",
 		REVERSER: "Peruutin",
 		REVERSED: "Päinvastaiseksi:",
 		INPUT: "Tulo:",
@@ -64,8 +68,8 @@ export default function App() {
 							id='demo-simple-select'
 							value={lang}
 							onChange={handleLanguageChange}>
-							<MenuItem value='en'>English</MenuItem>
-							<MenuItem value='fi'>Suomi</MenuItem>
+							<MenuItem value='en'>{data[lang].EN}</MenuItem>
+							<MenuItem value='fi'>{data[lang].FI}</MenuItem>
 						</Select>
 					</Box>
 					<Box className={classes.box}>
